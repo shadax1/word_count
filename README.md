@@ -8,7 +8,7 @@ By simply using `Count Specific Words` from the command palette, a panel on the 
 
 Here is a brief demo:
 
-https://github.com/shadax1/word_count/assets/25485011/6fec7a30-31fb-44aa-89d6-a0b841cd426c
+https://github.com/shadax1/word_count/assets/25485011/67c8bab3-d796-465d-898c-0539731627c0
 
 ## Misc
 After almost a decade of using Sublime Text, I decided to finally try writing a plugin for a feature I always needed but wasn't able to find in the current package list.
