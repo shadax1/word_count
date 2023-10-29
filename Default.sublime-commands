@@ -1,0 +1,18 @@
+[
+    {
+        "caption": "WordCount: Count Specific Words",
+        "command": "word_count"
+    },
+    {
+        "caption": "WordCount: Copy Word Counters",
+        "command": "copy_word_counters"
+    },
+    {
+        "caption": "WordCount: Sort Words By Counters (Ascending)",
+        "command": "sort_words_by_counters_ascending"
+    },
+    {
+        "caption": "WordCount: Sort Words By Counters (Descending)",
+        "command": "sort_words_by_counters_descending"
+    }
+]
