@@ -2,7 +2,7 @@
 Sublime Text plugin written in Python that counts specific words, given by the user, from text or a file.
 
 ## How to use?
-By simply using `Count Specific Words` from the command palette, a panel on the right will show up and the user can then enter words to be counted. It's also possible to copy all words with their counters into the clipboard and sort words in an ascending or descending order from the command palette.
+By using `Count Specific Words` from the command palette, a panel on the right will show up and the user can then enter words to be counted. It's also possible to copy all words with their counters into the clipboard and sort words in an ascending or descending order from the command palette.
 
 ![cp](https://github.com/shadax1/word_count/blob/main/screenshots/command%20palette.png?raw=true)
 
@@ -19,6 +19,5 @@ I also followed FichteFoll's [suggestions](https://github.com/wbond/package_cont
 The execution for this plugin isn't really the best but it does the job for me at the moment.
 
 Current limitations/issues and things I want to improve:
-- typing in the command palette triggers `on_modified_async` which can be annoying with large files
 - counting in a large file is quite demanding in terms of cpu
 - make it so it doesn't recount after a sort
