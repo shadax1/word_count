@@ -27,7 +27,7 @@ class WordCountEventListener(sublime_plugin.EventListener):
 
     def on_modified_async(self, view):
         if view.window() != None:
-            if view.window().num_groups() == 2 and view.window().active_view_in_group(1).name() == "Word Count":
+            if view.window().num_groups() == 2 and view.window().active_view_in_group(1).name() == "Word Count" and view.element() == None:
                 global clipboard
                 self.view_target = view.window().active_view_in_group(0) #view from which we count words
                 view_word_count = view.window().active_view_in_group(1) #view in which we will insert counters
@@ -61,9 +61,10 @@ class WordCountEventListener(sublime_plugin.EventListener):
                 self.phantom_set.update(self.phantoms)
 
     def on_activated_async(self, view): #tab has changed
-        if view.window().active_view_in_group(0) != self.view_target:
-            self.view_target = view.window().active_view_in_group(0) #update the target view object to the new one
-            self.on_modified_async(view) #retrigger the count
+        if view.window() != None:
+            if view.window().active_view_in_group(0) != self.view_target:
+                self.view_target = view.window().active_view_in_group(0) #update the target view object to the new one
+                self.on_modified_async(view) #retrigger the count
 
 class CopyWordCountersCommand(sublime_plugin.TextCommand):
     def run(self, edit):
