@@ -27,7 +27,7 @@ class WordCountEventListener(sublime_plugin.EventListener):
 
     def on_modified_async(self, view):
         if view.window() != None:
-            if view.window().num_groups() == 2 and view.window().active_view_in_group(1).name() == "Word Count" and view.element() == None:
+            if view.window().num_groups() == 2 and view.window().active_view_in_group(1).name() == "Word Count" and view.settings().get('is_widget') == None:
                 global clipboard
                 self.view_target = view.window().active_view_in_group(0) #view from which we count words
                 view_word_count = view.window().active_view_in_group(1) #view in which we will insert counters
@@ -54,9 +54,9 @@ class WordCountEventListener(sublime_plugin.EventListener):
                         occurences = self.view_target.find_all(word, flags)
                         #print(f"word => {word} shows up {len(occurences)} times")
                         self.phantoms.append(sublime.Phantom(sublime.Region(view_word_count.text_point(i, len(word))),
-                                            f"{len(occurences)}",
+                                            "{}".format(len(occurences)),
                                             sublime.LAYOUT_INLINE))
-                        clipboard += f"{word}\t{len(occurences)}\n"
+                        clipboard += "{}\t{}\n".format(word, len(occurences))
                         i += 1
                 self.phantom_set.update(self.phantoms)
 
@@ -103,7 +103,7 @@ def sort_words(order, view, edit):
     #store the sorted words back into a new string
     sorted_words = ""
     for word in lst_words:
-        sorted_words += f"{word[0]}\n"
+        sorted_words += "{}\n".format(word[0])
 
     #replace the existing content of the view with the newly created string
     region = sublime.Region(107, len(view)) #107 characters to leave the settings lines intact
