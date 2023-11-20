@@ -54,7 +54,7 @@ class WordCountEventListener(sublime_plugin.EventListener):
                         occurences = self.view_target.find_all(word, flags)
                         #print(f"word => {word} shows up {len(occurences)} times")
                         self.phantoms.append(sublime.Phantom(sublime.Region(view_word_count.text_point(i, len(word))),
-                                            "{}".format(len(occurences)),
+                                            ":\t" + "{}".format(len(occurences)),
                                             sublime.LAYOUT_INLINE))
                         clipboard += "{}\t{}\n".format(word, len(occurences))
                         i += 1
