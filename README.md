@@ -14,7 +14,7 @@ Here is a brief demo:
 
 ![demo](images/demo.gif "demonstration")
 
-It's also possible to switch the `Whole word` and `Case sensitive` flags between 0 and 1 to enable/disable them.
+It's also possible to switch the `Whole word` and `Case sensitive` flags between 0 or 1 to disable or enable them respectively.
 
 ## Contributions/Suggestions
 Contributions and suggestions are more than welcome as this is my first time writing a plugin for Sublime Text.
