@@ -4,7 +4,7 @@ Sublime Text plugin written in Python that counts specific words given by the us
 ## How to use?
 From the Command Palette:
 
-- `Count Specific Words` opens a panel on the right where the user can then enter words to be counted,
+- `Count Specific Words` opens a panel on the right where the user can then enter words to count,
 - `Copy Word Counters` from that same panel, copies all words and their counters into the clipboard,
 - `Sort Words By Counters` sorts all words in an ascending or descending order based on the counters.
 
@@ -14,7 +14,7 @@ Here is a brief demo:
 
 ![demo](images/demo.gif "demonstration")
 
-It's also possible to switch the `Whole word` and `Case sensitive` flags between 0 or 1 to disable or enable them respectively.
+It's also possible to switch the `Whole word` and `Case sensitive` flags between `0` or `1` to disable or enable them respectively.
 
 ## Contributions/Suggestions
 Contributions and suggestions are more than welcome as this is my first time writing a plugin for Sublime Text.
